@@ -4,13 +4,9 @@
  *******************************************/
 
 var express = require("express");
-const mongoose = require("mongoose");
 var app = express();
-try {
-  var mongoose = require("mongoose");
-} catch (e) {
-  console.log(e);
-}
+const mongoose = require("mongoose");
+
 var fs = require("fs");
 var path = require("path");
 var bodyParser = require("body-parser");
@@ -423,8 +419,11 @@ app.use(function (req, res) {
 });
 
 mongoose.connect(
-  "user_1:user_1_test_1994@cluster0.l8le2.mongodb.net/Cluster0?retryWrites=true&w=majority",
-  { useNewUrlParser: true, useUnifiedTopology: true }
+  "mongodb+srv://user_1:user_1_test_1994@cluster0.l8le2.mongodb.net/Cluster0?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
 );
 
 var listener = app.listen(process.env.PORT || 3000, function () {
