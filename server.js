@@ -6,7 +6,7 @@
 var express = require("express");
 var app = express();
 const mongoose = require("mongoose");
-
+const schema = require("./schema");
 var fs = require("fs");
 var path = require("path");
 var bodyParser = require("body-parser");
