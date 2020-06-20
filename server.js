@@ -4,6 +4,7 @@
  *******************************************/
 
 var express = require("express");
+const mongoose = require("mongoose");
 var app = express();
 try {
   var mongoose = require("mongoose");
